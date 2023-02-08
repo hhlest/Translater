@@ -42,8 +42,8 @@ public class Dictionary {
 
     public void fillUp() {
         Scanner sc = new Scanner(System.in);
-        String entry = "exit";
-        while (!entry.equalsIgnoreCase("s")) {
+        String userAnswer = "save";
+        while (!userAnswer.equalsIgnoreCase("s")) {
             System.out.println("Please, enter new entry: ");
             System.out.print("Eng: ");
             String eng = sc.next();
@@ -52,7 +52,7 @@ public class Dictionary {
             dictionary.put(eng, ukr);
             System.out.println("Add one more entry, press: Y");
             System.out.println("Save updated dictionary, press: S");
-            entry = sc.next();
+            userAnswer = sc.next();
         }
     }
 
